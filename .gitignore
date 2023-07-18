@@ -33,3 +33,6 @@ out/
 src/main/generated/
 ### VS Code ###
 .vscode/
+
+### App properties with DB password ###
+/src/main/resources/application.properties
