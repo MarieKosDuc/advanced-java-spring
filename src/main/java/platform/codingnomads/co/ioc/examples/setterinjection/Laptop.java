@@ -8,6 +8,8 @@ public class Laptop {
     private Processor processor;
     private OS os;
 
+    private RAM ram;
+
     @Autowired
     public void setProcessor(Processor processor) {
         this.processor = processor;
@@ -18,8 +20,11 @@ public class Laptop {
         this.os = os;
     }
 
+    @Autowired
+    public void setRam(RAM ram) { this.ram = ram; }
+
     public String printLaptopConfiguration() {
         return "processor: " + processor.getCore() + " core " + processor.getName() +
-                "\nOS: " + os.getName();
+                "\nOS: " + os.getName() + "\nRAM capacity: " + ram.getCapacity();
     }
 }
