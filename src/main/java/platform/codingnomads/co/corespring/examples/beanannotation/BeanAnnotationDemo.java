@@ -10,6 +10,9 @@ public class BeanAnnotationDemo {
         ctx.register(BeanAnnotationConfig.class);
         ctx.refresh();
         SampleBean sampleBean = ctx.getBean("friendly_bean_name", SampleBean.class);
+        //System.out.println("-------Haschode: " + sampleBean.hashCode());
+        //SampleBean sampleBean2 = ctx.getBean("not_so_friendly_bean", SampleBean.class);
+        //System.out.println("-------Haschode: " + sampleBean2.hashCode());
         ctx.close();
     }
 }
