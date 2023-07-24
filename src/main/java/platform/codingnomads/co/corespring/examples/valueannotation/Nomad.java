@@ -30,6 +30,12 @@ public class Nomad {
     @Value("${nomad.ide:IntelliJ IDEA}")
     private String ide;
 
+    @Value("${nomad.cat}")
+    private String cat;
+
+    @Value("${nomad.location}")
+    private String location;
+
     @Value("${nomad.workingDays}")
     private List<String> workingDays;
 
@@ -45,7 +51,7 @@ public class Nomad {
     }
 
     public String output() {
-        return "Spring Developer is building awesome software using: ".concat(jdk).concat(" , ").concat(framework).concat(" and ").concat(ide);
+        return "This Spring Developer is building awesome software using: ".concat(jdk).concat(" , ").concat(framework).concat(" and ").concat(ide);
     }
 
     public List<String> getWorkingDays() {
@@ -54,5 +60,13 @@ public class Nomad {
 
     public Map<String, String> getDatabaseValues() {
         return databaseValues;
+    }
+
+    public String getCat() {
+        return cat;
+    }
+
+    public String getLocation() {
+        return location;
     }
 }

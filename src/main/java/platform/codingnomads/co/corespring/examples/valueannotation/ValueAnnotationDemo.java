@@ -15,7 +15,9 @@ public class ValueAnnotationDemo {
         System.out.println(output);
         nomad.getWorkingDays().forEach(System.out::println);
         System.out.println(nomad.getDatabaseValues());
-        System.out.println(nomad.nomadIdentity());
+        System.out.println(nomad.nomadIdentity() + " years old is learning Spring");
+        System.out.println("With " + nomad.getCat());
+        System.out.println("In " + nomad.getLocation());
         ctx.close();
     }
 }
