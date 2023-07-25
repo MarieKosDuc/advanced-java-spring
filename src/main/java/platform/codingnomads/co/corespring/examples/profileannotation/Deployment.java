@@ -6,15 +6,15 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("test")
-@PropertySource(value = "application-test.properties", ignoreResourceNotFound = true)
-public class SpringDeveloper {
+@Profile("deploy")
+@PropertySource(value = "application-deploy.properties", ignoreResourceNotFound = true)
+public class Deployment {
 
     @Value("${app.version}")
     private String appVersion;
 
-    public SpringDeveloper() {
-        System.out.println("SpringDeveloper is ready.");
+    public Deployment() {
+        System.out.println("Application deployed.");
     }
 
     public String getAppVersion() {

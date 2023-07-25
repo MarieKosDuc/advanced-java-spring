@@ -8,8 +8,8 @@ public class PropertySourceAnnotationDemo {
         ctx.register(PropertySourceAnnotationConfig.class);
         ctx.refresh();
         final App app = ctx.getBean(App.class);
-        System.out.println("Values from myapp.properties: " +
-                "App Name: " + app.getAppName() + ", App Version: " + app.getAppVersion());
+        System.out.println("---------- Values from myapp.properties: " +
+                "App Name: " + app.getAppName() + ", App Version: " + app.getAppVersion() + ", App year: " + app.getAppYear());
         ctx.close();
     }
 }
