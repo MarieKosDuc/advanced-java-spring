@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
-public class CoreLabApplication {
+public class CoreLabApplicationFinal {
     public static void main(String[] args) {
 
         ApplicationContext ctx = new AnnotationConfigApplicationContext(
