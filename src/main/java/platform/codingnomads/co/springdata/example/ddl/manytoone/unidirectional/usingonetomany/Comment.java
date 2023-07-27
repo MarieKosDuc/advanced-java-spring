@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "comments")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,8 +15,8 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, updatable = false)
-    private String username;
+    //@Column(nullable = false, updatable = false)
+    //private String username;
 
     @Column(nullable = false)
     private String content;
